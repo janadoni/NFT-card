@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Outfit:wght@100&display=swap');
+*{ 
+    margin:0;
+    padding: 0;
+    font-family: 'outfit';
+}
+html{
+    background: hsl(217, 54%, 11%) ;
+}
+.preview_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: hsl(217, 54%, 11%);
+    height: 100vh;
+    
+}
+.preview_card .preview_container{
+    width: 350px;
+    background: hsl(216, 50%, 16%);
+    box-shadow:  0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+.preview_card .preview_container .image{
+    margin: 15px;
+    width: 320px;
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.preview_card .preview_container .image img{
+    width:320px ;
+    height:350px ;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.preview_card .preview_container .image {
+    z-index: 0;
+   background: hsl(178, 100%, 50%);
+}
+.image::after {
+    --aqua: hsla(178, 100%, 50%, 0.5);
+
+    content: url(./images/icon-view.svg);
+    background: var(--aqua);
+    position: absolute;
+    inset: 0;
+     display:         flex;
+    justify-content: center;
+    align-items:     center;
+    opacity: 0;
+    transition: all 0.25s ease;
+  }
+  .image:hover::after { opacity: 1; }
+
+    .image {
+      width: 100%;
+      display: block;
+    }
+.preview_card .preview_container .content{
+    margin: 20px;
+}
+.preview_card .preview_container .content a{
+    color: hsl(0, 0%, 100%);
+    font-size:18px ;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.preview_card .preview_container .content a:hover{
+    color: hsl(178, 100%, 50%);
+}
+.preview_card .preview_container .content p{
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+    font-weight:400 ;
+    margin-top: 20px;
+}
+.preview_card .preview_container .value{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.preview_card .preview_container .value h4{
+    color: hsl(178, 100%, 50%);
+    font-size: 15px;
+    font-weight: 600px;
+}
+.preview_card .preview_container .value h5{
+    font-size: 15px;
+    font-weight: 600px;
+
+    color: hsl(215, 51%, 70%);
+}
+.preview_card .preview_container .create{
+    display: flex;
+    border-top: 2px solid hsl(215, 32%, 27%);
+}
+.preview_card .preview_container .create img{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.preview_card .preview_container .create h4{
+    margin-left: 20px;
+    margin-top: 30px;
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+    font-weight:600;
+    
+}
+.preview_card .preview_container .create h4 span{
+    color: white;
+    padding-left: 10px;
+}
+
+
+/* media query section*/
